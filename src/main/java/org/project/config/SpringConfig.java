@@ -19,7 +19,6 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 import javax.sql.DataSource;
 import java.util.Objects;
 
-
 @Configuration
 @ComponentScan("org.project")
 @EnableWebMvc

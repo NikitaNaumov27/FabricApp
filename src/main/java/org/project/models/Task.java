@@ -1,5 +1,5 @@
 package org.project.models;
-
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
@@ -13,16 +13,15 @@ public class Task {
 
     @Min(value = 1, message = "Срок выполнения должен быть больше, чем 1 день")
     private int deadline;
-    @NotEmpty(message = "Сложность задачи не должна быть пустой")
-    @Size(min = 6, max = 10, message = "Сложность задачи должна быть от 6 до 10 символов длиной")
-    private String difficulty;
 
-
+    @Min(value = 1, message = "Сложность задачи не может быть меньше 1 (Легкая)")
+    @Max(value = 3, message = "Сложность задачи не может быть больше 3 (Сложная)")
+    private int difficulty;
 
     public Task() {
     }
 
-    public Task(String taskName, int deadline, String difficulty) {
+    public Task(String taskName, int deadline, int difficulty) {
         this.taskName = taskName;
         this.deadline = deadline;
         this.difficulty = difficulty;
@@ -52,11 +51,11 @@ public class Task {
         this.deadline = deadline;
     }
 
-    public String getDifficulty() {
+    public int getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(String difficulty) {
+    public void setDifficulty(int difficulty) {
         this.difficulty = difficulty;
     }
 }

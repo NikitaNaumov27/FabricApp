@@ -12,7 +12,6 @@ import org.project.util.PersonValidator;
 import javax.validation.Valid;
 import java.time.LocalDate;
 
-
 @Controller
 @RequestMapping("/people")
 public class PeopleController {

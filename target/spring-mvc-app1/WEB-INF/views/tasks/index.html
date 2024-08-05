@@ -83,9 +83,9 @@
             <br/>
             <span class="task-label">Сложность:</span>
             <span th:switch="${task.getDifficulty()}">
-                <span th:case="'Легкая'" style="color: mediumseagreen"  th:text="${task.getDifficulty()}"></span>
-                <span th:case="'Средняя'" style="color: orange;" th:text="${task.getDifficulty()}"></span>
-                <span th:case="'Сложная'" style="color: red" th:text="${task.getDifficulty()}"></span>
+                <span th:case="1" style="color: mediumseagreen"  th:text="Легкая"></span>
+                <span th:case="2" style="color: orange;" th:text="Средняя"></span>
+                <span th:case="3" style="color: red" th:text="Сложная"></span>
             </span>
             <hr/>
         </a>

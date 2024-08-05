@@ -107,9 +107,9 @@
                     <td th:case="*"     th:text="${task.getDeadline() + ' дней (до ' + localDate.plusDays(task.getDeadline()) + ')'}">Deadline</td>
                 </span>
                 <span th:switch="${task.getDifficulty()}">
-                    <td th:case="'Легкая'" style="color: mediumseagreen"  th:text="${task.getDifficulty()}">Difficulty</td>
-                    <td th:case="'Средняя'" style="color: orange;" th:text="${task.getDifficulty()}">Difficulty</td>
-                    <td th:case="'Сложная'" style="color: red" th:text="${task.getDifficulty()}">Difficulty</td>
+                    <td th:case="1" style="color: mediumseagreen"  th:text="Легкая">Difficulty</td>
+                    <td th:case="2" style="color: orange;" th:text="Средняя">Difficulty</td>
+                    <td th:case="3" style="color: red" th:text="Сложная">Difficulty</td>
                 </span>
             </tr>
             </tbody>

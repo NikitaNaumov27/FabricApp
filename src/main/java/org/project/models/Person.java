@@ -20,10 +20,7 @@ public class Person {
 
     // Конструктор по умолчанию нужен для Spring
     public Person() {
-
     }
-
-
 
     public Person(String fullName, int yearOfBirth, String position) {
         this.fullName = fullName;

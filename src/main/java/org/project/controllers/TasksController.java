@@ -14,14 +14,12 @@ import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.Optional;
 
-
 @Controller
 @RequestMapping("/tasks")
 public class TasksController {
 
     private final TaskDAO taskDAO;
     private final PersonDAO personDAO;
-
 
     @Autowired
     public TasksController(TaskDAO TaskDAO, PersonDAO personDAO) {
